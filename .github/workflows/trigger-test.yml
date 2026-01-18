@@ -67,9 +67,9 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-            docker stop spring-app || true
-            docker rm spring-app || true
+            docker stop app-test || true
+            docker rm app-test || true
             docker run -d \
-              --name spring-app \
+              --name app-test \
               -p 8080:8080 \
               $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
