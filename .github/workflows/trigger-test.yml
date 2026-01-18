@@ -1,4 +1,4 @@
-name: Trigger Test (product)
+name: Trigger Test (product → EC2)
 
 on:
   push:
@@ -7,8 +7,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - name: Say Hello
-        run: echo "🚀 product 브랜치에 변경이 감지되었습니다"
+      - name: Who am I?
+        run: |
+          echo "Running on EC2 Self-hosted Runner"
+          hostname
+          whoami
