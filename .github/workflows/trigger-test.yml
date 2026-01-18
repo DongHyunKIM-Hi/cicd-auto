@@ -1,0 +1,14 @@
+name: Trigger Test (product)
+
+on:
+  push:
+    branches:
+      - product
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "🚀 product 브랜치에 변경이 감지되었습니다"
