@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CicdAutoApplication {
 
     // h2 test
+    // test2
     public static void main(String[] args) {
         SpringApplication.run(CicdAutoApplication.class, args);
     }
