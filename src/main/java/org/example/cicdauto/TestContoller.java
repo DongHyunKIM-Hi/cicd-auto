@@ -8,6 +8,6 @@ public class TestContoller {
 
     @GetMapping("/test")
     public String test() {
-        return "신기방기신기방기";
+        return "이렇게도 바꿔서 테스트 해볼께용";
     }
 }
